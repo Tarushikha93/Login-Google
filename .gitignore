@@ -1,0 +1,10 @@
+# OS
+.DS_Store
+
+# Env
+.env
+
+# Local TLS certs/keys (do not commit)
+*.pem
+
+
