@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="card" aria-labelledby="signin-title">
+        <h1 id="signin-title" class="title">Sign in</h1>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              inputmode="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            >
+            <p class="error" id="email-error" role="alert" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <div class="label-row">
+              <label for="password">Password</label>
+              <a class="link" href="#" id="forgot-password">Forgot password?</a>
+            </div>
+            <div class="password-input">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                placeholder="Your password"
+                minlength="6"
+                required
+              >
+              <button type="button" class="toggle" aria-label="Show password" id="toggle-password">Show</button>
+            </div>
+            <p class="error" id="password-error" role="alert" aria-live="polite"></p>
+          </div>
+
+          <div class="controls">
+            <label class="remember">
+              <input type="checkbox" id="remember" name="remember" checked>
+              <span>Remember me</span>
+            </label>
+            <button type="submit" class="btn">Sign in</button>
+          </div>
+        </form>
+
+        <div class="divider"><span>or</span></div>
+
+        <div id="g_id_onload"
+          data-client_id="1090274313235-galde9bp460g587ho744eed4kcil25b9.apps.googleusercontent.com"
+          data-context="signin"
+          data-ux_mode="popup"
+          data-callback="handleCredentialResponse"
+          data-auto_select="false">
+        </div>
+        <div class="g_id_signin"
+          data-type="standard"
+          data-shape="rectangular"
+          data-theme="outline"
+          data-text="continue_with"
+          data-size="large"
+          data-logo_alignment="left">
+        </div>
+
+        <p class="footnote">By continuing, you agree to our
+          <a class="link" href="#">Terms</a> and <a class="link" href="#">Privacy Policy</a>.
+        </p>
+      </section>
+    </main>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
+
